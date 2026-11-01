@@ -69,15 +69,15 @@ public class Main {
 
             } else if (opcao == 3) {
 
-                double saque;
+                double valorTransferencia;
 
                 while (true) {
                     System.out.println("Informe o valor que deseja transferir:");
 
                     if (scanner.hasNextDouble()) {
-                        saque = scanner.nextDouble();
+                        valorTransferencia = scanner.nextDouble();
 
-                        if (saque > 0) {
+                        if (valorTransferencia > 0) {
                             break;
                         } else {
                             System.out.println("Valor de transferência inválido. Digite um valor maior que zero.");
@@ -105,8 +105,8 @@ public class Main {
 
                 if (confirmacao.equalsIgnoreCase("S")) {
 
-                    if (saldo >= saque) {
-                        saldo = saldo - saque;
+                    if (saldo >= valorTransferencia) {
+                        saldo = saldo - valorTransferencia;
                         System.out.printf("Saldo atualizado: R$ %,.2f%n", saldo);
 
                     } else {
